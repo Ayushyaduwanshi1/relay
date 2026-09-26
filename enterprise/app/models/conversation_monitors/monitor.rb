@@ -1,3 +1,34 @@
+# == Schema Information
+#
+# Table name: conversation_monitors
+#
+#  id                   :bigint           not null, primary key
+#  collection_version   :bigint           default(0), not null
+#  condition            :text             not null
+#  data_revision        :bigint           default(0), not null
+#  deleted_at           :datetime
+#  history_since        :datetime         not null
+#  model                :string           not null
+#  name                 :string           not null
+#  paused_at            :datetime
+#  recheck_requested_at :datetime
+#  resumed_at           :datetime
+#  threshold            :float            not null
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  account_id           :bigint           not null
+#  user_id              :bigint
+#
+# Indexes
+#
+#  index_conversation_monitors_on_account_id  (account_id)
+#  index_conversation_monitors_on_user_id     (user_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (account_id => accounts.id) ON DELETE => cascade
+#  fk_rails_...  (user_id => users.id) ON DELETE => nullify
+#
 class ConversationMonitors::Monitor < ApplicationRecord
   self.table_name = 'conversation_monitors'
 

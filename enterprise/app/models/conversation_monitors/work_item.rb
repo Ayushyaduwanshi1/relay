@@ -1,3 +1,35 @@
+# == Schema Information
+#
+# Table name: conversation_monitor_work_items
+#
+#  id                    :bigint           not null, primary key
+#  activity_at           :datetime
+#  attempts              :integer          default(0), not null
+#  due_at                :datetime
+#  error_code            :string
+#  full_history_revision :bigint           default(0), not null
+#  generation            :bigint           default(0), not null
+#  lease_expires_at      :datetime
+#  lease_token           :string
+#  processed_revision    :bigint           default(0), not null
+#  requested_at          :datetime
+#  revision              :bigint           default(0), not null
+#  created_at            :datetime         not null
+#  updated_at            :datetime         not null
+#  account_id            :bigint           not null
+#  conversation_id       :bigint           not null
+#
+# Indexes
+#
+#  index_conversation_monitor_work_items_on_account_id       (account_id)
+#  index_conversation_monitor_work_items_on_conversation_id  (conversation_id) UNIQUE
+#  index_monitor_work_due                                    (due_at) WHERE (due_at IS NOT NULL)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (account_id => accounts.id) ON DELETE => cascade
+#  fk_rails_...  (conversation_id => conversations.id) ON DELETE => cascade
+#
 class ConversationMonitors::WorkItem < ApplicationRecord
   self.table_name = 'conversation_monitor_work_items'
 
