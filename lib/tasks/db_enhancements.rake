@@ -38,6 +38,8 @@ db_namespace = namespace :db do
     name = ENV.fetch('ADMIN_NAME', 'Admin')
 
     account = Account.first || Account.create!(name: ENV.fetch('INSTALLATION_NAME', 'Relay'))
+    default_features = Featurable::FEATURE_LIST.select { |f| f['enabled'] }.map { |f| f['name'] }
+    account.enable_features!(*default_features)
 
     user = User.from_email(email) || SuperAdmin.new(email: email)
     user.define_singleton_method(:fetch_avatar_from_gravatar) { nil }

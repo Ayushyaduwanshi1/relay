@@ -34,6 +34,9 @@ if Rails.env.production?
     user.save!
 
     account = Account.first || Account.create!(name: ENV.fetch('INSTALLATION_NAME', 'Relay'))
+    default_features = Featurable::FEATURE_LIST.select { |f| f['enabled'] }.map { |f| f['name'] }
+    account.enable_features!(*default_features)
+
     account_user = AccountUser.find_or_initialize_by(account_id: account.id, user_id: user.id)
     account_user.role = :administrator
     account_user.save!
