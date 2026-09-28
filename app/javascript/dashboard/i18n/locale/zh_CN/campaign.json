@@ -1,0 +1,311 @@
+{
+  "CAMPAIGN": {
+    "LIVE_CHAT": {
+      "HEADER_TITLE": "实时聊天活动",
+      "NEW_CAMPAIGN": "创建活动",
+      "CARD": {
+        "STATUS": {
+          "ENABLED": "已启用",
+          "DISABLED": "已禁用"
+        },
+        "CAMPAIGN_DETAILS": {
+          "SENT_BY": "发送者",
+          "BOT": "机器人",
+          "FROM": "发自",
+          "URL": "网址："
+        }
+      },
+      "EMPTY_STATE": {
+        "TITLE": "暂无实时聊天活动",
+        "SUBTITLE": "通过主动消息与您的客户连接。点击 '创建活动' 开始。"
+      },
+      "CREATE": {
+        "TITLE": "创建实时聊天活动",
+        "CANCEL_BUTTON_TEXT": "取消",
+        "CREATE_BUTTON_TEXT": "创建",
+        "FORM": {
+          "TITLE": {
+            "LABEL": "标题",
+            "PLACEHOLDER": "请输入活动标题",
+            "ERROR": "标题是必填项"
+          },
+          "MESSAGE": {
+            "LABEL": "消息",
+            "PLACEHOLDER": "请输入活动消息",
+            "ERROR": "消息是必填项"
+          },
+          "INBOX": {
+            "LABEL": "选择收件箱",
+            "PLACEHOLDER": "选择收件箱",
+            "ERROR": "收件箱是必填项"
+          },
+          "SENT_BY": {
+            "LABEL": "发送者",
+            "PLACEHOLDER": "请选择发件人",
+            "ERROR": "发件人是必填项"
+          },
+          "END_POINT": {
+            "LABEL": "网址",
+            "PLACEHOLDER": "请输入网址",
+            "ERROR": "请输入有效的网址"
+          },
+          "TIME_ON_PAGE": {
+            "LABEL": "页面停留时间（秒）",
+            "PLACEHOLDER": "请输入时间",
+            "ERROR": "页面停留时间是必填项"
+          },
+          "OTHER_PREFERENCES": {
+            "TITLE": "其他设置",
+            "ENABLED": "启用活动",
+            "TRIGGER_ONLY_BUSINESS_HOURS": "仅在工作时间触发"
+          },
+          "BUTTONS": {
+            "CREATE": "创建",
+            "CANCEL": "取消"
+          },
+          "API": {
+            "SUCCESS_MESSAGE": "实时聊天活动创建成功",
+            "ERROR_MESSAGE": "发生错误，请重试。"
+          }
+        }
+      },
+      "EDIT": {
+        "TITLE": "编辑实时聊天活动",
+        "FORM": {
+          "API": {
+            "SUCCESS_MESSAGE": "实时聊天活动更新成功",
+            "ERROR_MESSAGE": "发生错误，请重试。"
+          }
+        }
+      }
+    },
+    "SMS": {
+      "HEADER_TITLE": "短信活动",
+      "NEW_CAMPAIGN": "创建活动",
+      "EMPTY_STATE": {
+        "TITLE": "暂无短信活动",
+        "SUBTITLE": "启动短信活动直接与客户沟通。轻松发送优惠或公告。点击 '创建活动' 开始。"
+      },
+      "CARD": {
+        "STATUS": {
+          "PROCESSING": "处理中",
+          "COMPLETED": "已完成",
+          "SCHEDULED": "已计划"
+        },
+        "CAMPAIGN_DETAILS": {
+          "SENT_FROM": "发自",
+          "ON": "于"
+        }
+      },
+      "CREATE": {
+        "TITLE": "创建短信活动",
+        "CANCEL_BUTTON_TEXT": "取消",
+        "CREATE_BUTTON_TEXT": "创建",
+        "FORM": {
+          "TITLE": {
+            "LABEL": "标题",
+            "PLACEHOLDER": "请输入活动标题",
+            "ERROR": "标题是必填项"
+          },
+          "MESSAGE": {
+            "LABEL": "消息",
+            "PLACEHOLDER": "请输入活动消息",
+            "ERROR": "消息是必填项"
+          },
+          "INBOX": {
+            "LABEL": "选择收件箱",
+            "PLACEHOLDER": "选择收件箱",
+            "ERROR": "收件箱是必填项"
+          },
+          "AUDIENCE": {
+            "LABEL": "受众",
+            "PLACEHOLDER": "选择客户标签",
+            "ERROR": "受众是必填项"
+          },
+          "SCHEDULED_AT": {
+            "LABEL": "计划时间",
+            "PLACEHOLDER": "请选择时间",
+            "ERROR": "计划时间是必填项"
+          },
+          "BUTTONS": {
+            "CREATE": "创建",
+            "CANCEL": "取消"
+          },
+          "API": {
+            "SUCCESS_MESSAGE": "短信活动创建成功",
+            "ERROR_MESSAGE": "发生错误，请重试。"
+          }
+        }
+      }
+    },
+    "WHATSAPP": {
+      "HEADER_TITLE": "WhatsApp campaigns",
+      "NEW_CAMPAIGN": "创建活动",
+      "EMPTY_STATE": {
+        "TITLE": "No WhatsApp campaigns are available",
+        "SUBTITLE": "Launch a WhatsApp campaign to reach your customers directly. Send offers or make announcements with ease. Click 'Create campaign' to get started."
+      },
+      "CARD": {
+        "ANALYTICS": "View analytics",
+        "STATUS": {
+          "PROCESSING": "处理中",
+          "COMPLETED": "已完成",
+          "SCHEDULED": "已计划"
+        },
+        "CAMPAIGN_DETAILS": {
+          "SENT_FROM": "发自",
+          "ON": "于"
+        }
+      },
+      "CREATE": {
+        "TITLE": "Create WhatsApp campaign",
+        "CANCEL_BUTTON_TEXT": "取消",
+        "CREATE_BUTTON_TEXT": "创建",
+        "FORM": {
+          "TITLE": {
+            "LABEL": "标题",
+            "PLACEHOLDER": "请输入活动标题",
+            "ERROR": "标题是必填项"
+          },
+          "INBOX": {
+            "LABEL": "选择收件箱",
+            "PLACEHOLDER": "选择收件箱",
+            "ERROR": "收件箱是必填项"
+          },
+          "TEMPLATE": {
+            "LABEL": "WhatsApp Template",
+            "PLACEHOLDER": "Select a template",
+            "INFO": "Select a template to use for this campaign.",
+            "ERROR": "Template is required",
+            "PREVIEW_TITLE": "{templateName} 处理中",
+            "LANGUAGE": "语言",
+            "CATEGORY": "类别",
+            "VARIABLES_LABEL": "参数",
+            "VARIABLE_PLACEHOLDER": "Enter value for {variable}"
+          },
+          "AUDIENCE": {
+            "LABEL": "受众",
+            "PLACEHOLDER": "选择客户标签",
+            "ERROR": "受众是必填项"
+          },
+          "SCHEDULED_AT": {
+            "LABEL": "计划时间",
+            "PLACEHOLDER": "请选择时间",
+            "ERROR": "计划时间是必填项"
+          },
+          "BUTTONS": {
+            "CREATE": "创建",
+            "CANCEL": "取消"
+          },
+          "API": {
+            "SUCCESS_MESSAGE": "WhatsApp campaign created successfully",
+            "ERROR_MESSAGE": "发生错误，请重试。"
+          }
+        }
+      },
+      "ANALYTICS": {
+        "LOADING": "Loading analytics...",
+        "EMPTY": "No delivery records found.",
+        "EMPTY_FILTER": "No {status} delivery records found.",
+        "DELIVERIES_ERROR": "Delivery records couldn't be loaded. Refresh the page to try again.",
+        "EMPTY_STATE": {
+          "ERROR": {
+            "TITLE": "Analytics couldn't be loaded",
+            "DESCRIPTION": "Refresh the page to try again."
+          },
+          "PENDING": {
+            "TITLE": "Delivery data will appear once sending begins",
+            "DESCRIPTION": "There are no delivery records for this campaign yet."
+          },
+          "UNAVAILABLE": {
+            "TITLE": "Analytics aren't available for this campaign",
+            "DESCRIPTION": "No delivery data was recorded for this campaign. This can happen for campaigns sent before campaign analytics were introduced."
+          }
+        },
+        "PROCESSING_BANNER": {
+          "DEFAULT": "This campaign is still processing. Analytics will update automatically.",
+          "BOTH": "This campaign is still processing. {queued} messages are queued, and {awaitingUpdate} are awaiting a delivery update from WhatsApp.",
+          "BOTH_SINGLE": "This campaign is still processing. {queued} message is queued, and {awaitingUpdate} is awaiting a delivery update from WhatsApp.",
+          "BOTH_QUEUED_SINGLE": "This campaign is still processing. {queued} message is queued, and {awaitingUpdate} are awaiting a delivery update from WhatsApp.",
+          "BOTH_AWAITING_SINGLE": "This campaign is still processing. {queued} messages are queued, and {awaitingUpdate} is awaiting a delivery update from WhatsApp.",
+          "QUEUED": "This campaign is still processing. {count} message is queued. | This campaign is still processing. {count} messages are queued.",
+          "AWAITING_UPDATE": "This campaign is still processing. {count} message is awaiting a delivery update from WhatsApp. | This campaign is still processing. {count} messages are awaiting a delivery update from WhatsApp.",
+          "COMPLETING": "This campaign is completing. Analytics will update automatically."
+        },
+        "RATE": "{value}% of audience",
+        "SENT_ON": "Sent on {date}",
+        "PAGE_INFO": "显示 {startItem} - {endItem} 个联系人，共 {totalItems} 个",
+        "BREADCRUMB": {
+          "CAMPAIGNS": "活动",
+          "WHATSAPP": "WhatsApp"
+        },
+        "FILTERS": {
+          "ALL": "所有的"
+        },
+        "METRICS": {
+          "AUDIENCE": {
+            "LABEL": "受众",
+            "HINT": "Contacts included in this campaign."
+          },
+          "SENT": {
+            "LABEL": "Submitted to WhatsApp",
+            "HINT": "Messages accepted by WhatsApp for delivery."
+          },
+          "DELIVERED": {
+            "LABEL": "Delivered",
+            "HINT": "Messages that reached the contact's device. Read messages are included."
+          },
+          "READ": {
+            "LABEL": "已读",
+            "HINT": "Messages opened by the contact."
+          },
+          "FAILED": {
+            "LABEL": "失败",
+            "HINT": "Messages WhatsApp could not deliver."
+          },
+          "SKIPPED": {
+            "LABEL": "Skipped",
+            "HINT": "Contacts skipped before sending, usually because of a missing or invalid phone number."
+          }
+        },
+        "STATUS": {
+          "QUEUED": "Queued",
+          "SENT": "Awaiting delivery update",
+          "DELIVERED": "Delivered",
+          "READ": "已读",
+          "FAILED": "失败",
+          "SKIPPED": "Skipped"
+        },
+        "BREAKDOWN": {
+          "TITLE": "Delivery breakdown",
+          "DELIVERY_RATE": "{value}% delivered",
+          "LEGEND": {
+            "READ": "已读",
+            "DELIVERED": "Delivered",
+            "FAILED": "失败",
+            "SKIPPED": "Skipped",
+            "PENDING": "Queued or awaiting update"
+          }
+        },
+        "TABLE": {
+          "TITLE": "Deliveries",
+          "CONTACT": "联系人",
+          "STATUS": "状态",
+          "MESSAGE": "消息",
+          "MESSAGE_NOT_GENERATED": "Not generated",
+          "REASON": "Reason",
+          "ERROR_CODE": "Code {code}"
+        }
+      }
+    },
+    "CONFIRM_DELETE": {
+      "TITLE": "确定删除吗？",
+      "DESCRIPTION": "删除操作是永久性的，无法恢复。",
+      "CONFIRM": "删除",
+      "API": {
+        "SUCCESS_MESSAGE": "活动删除成功",
+        "ERROR_MESSAGE": "发生错误，请重试。"
+      }
+    }
+  }
+}

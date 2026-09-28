@@ -1,0 +1,311 @@
+{
+  "CAMPAIGN": {
+    "LIVE_CHAT": {
+      "HEADER_TITLE": "Live chat campaigns",
+      "NEW_CAMPAIGN": "Create campaign",
+      "CARD": {
+        "STATUS": {
+          "ENABLED": "فعال شد",
+          "DISABLED": "غیرفعال شد"
+        },
+        "CAMPAIGN_DETAILS": {
+          "SENT_BY": "ارسال شده توسط",
+          "BOT": "ربات",
+          "FROM": "از",
+          "URL": "URL:"
+        }
+      },
+      "EMPTY_STATE": {
+        "TITLE": "No live chat campaigns are available",
+        "SUBTITLE": "Connect with your customers using proactive messages.  Click 'Create campaign' to get started."
+      },
+      "CREATE": {
+        "TITLE": "Create a live chat campaign",
+        "CANCEL_BUTTON_TEXT": "انصراف",
+        "CREATE_BUTTON_TEXT": "ايجاد كردن",
+        "FORM": {
+          "TITLE": {
+            "LABEL": "عنوان",
+            "PLACEHOLDER": "لطفا عنوان کمپین را وارد کنید",
+            "ERROR": "عنوان الزامی است"
+          },
+          "MESSAGE": {
+            "LABEL": "پیام",
+            "PLACEHOLDER": "لطفاً پیام کمپین را وارد کنید",
+            "ERROR": "پیام الزامی است"
+          },
+          "INBOX": {
+            "LABEL": "انتخاب صندوق ورودی",
+            "PLACEHOLDER": "انتخاب صندوق ورودی",
+            "ERROR": "صندوق ورودی مورد نیاز است"
+          },
+          "SENT_BY": {
+            "LABEL": "ارسال شده توسط",
+            "PLACEHOLDER": "Please select sender",
+            "ERROR": "ارسال کننده الزامی است"
+          },
+          "END_POINT": {
+            "LABEL": "URL",
+            "PLACEHOLDER": "لطفاً URL را وارد کنید",
+            "ERROR": "لطفا آدرس URL صحیحی وارد کنید"
+          },
+          "TIME_ON_PAGE": {
+            "LABEL": "زمان در صفحه (ثانیه ها)",
+            "PLACEHOLDER": "لطفاً زمان را وارد کنید",
+            "ERROR": "زمان حضور در صفحه لازم است"
+          },
+          "OTHER_PREFERENCES": {
+            "TITLE": "Other preferences",
+            "ENABLED": "فعال کردن کمپین",
+            "TRIGGER_ONLY_BUSINESS_HOURS": "تنها در طول ساعات کاری"
+          },
+          "BUTTONS": {
+            "CREATE": "ايجاد كردن",
+            "CANCEL": "انصراف"
+          },
+          "API": {
+            "SUCCESS_MESSAGE": "Live chat campaign created successfully",
+            "ERROR_MESSAGE": "یک خطای وجود دارد. لطفا دوباره تلاش کنید."
+          }
+        }
+      },
+      "EDIT": {
+        "TITLE": "Edit live chat campaign",
+        "FORM": {
+          "API": {
+            "SUCCESS_MESSAGE": "Live chat campaign updated successfully",
+            "ERROR_MESSAGE": "یک خطای وجود دارد. لطفا دوباره تلاش کنید."
+          }
+        }
+      }
+    },
+    "SMS": {
+      "HEADER_TITLE": "SMS campaigns",
+      "NEW_CAMPAIGN": "Create campaign",
+      "EMPTY_STATE": {
+        "TITLE": "No SMS campaigns are available",
+        "SUBTITLE": "Launch an SMS campaign to reach your customers directly. Send offers or make announcements with ease. Click 'Create campaign' to get started."
+      },
+      "CARD": {
+        "STATUS": {
+          "PROCESSING": "Processing",
+          "COMPLETED": "تکمیل شد",
+          "SCHEDULED": "Scheduled"
+        },
+        "CAMPAIGN_DETAILS": {
+          "SENT_FROM": "Sent from",
+          "ON": "on"
+        }
+      },
+      "CREATE": {
+        "TITLE": "Create SMS campaign",
+        "CANCEL_BUTTON_TEXT": "انصراف",
+        "CREATE_BUTTON_TEXT": "ايجاد كردن",
+        "FORM": {
+          "TITLE": {
+            "LABEL": "عنوان",
+            "PLACEHOLDER": "لطفا عنوان کمپین را وارد کنید",
+            "ERROR": "عنوان الزامی است"
+          },
+          "MESSAGE": {
+            "LABEL": "پیام",
+            "PLACEHOLDER": "لطفاً پیام کمپین را وارد کنید",
+            "ERROR": "پیام الزامی است"
+          },
+          "INBOX": {
+            "LABEL": "انتخاب صندوق ورودی",
+            "PLACEHOLDER": "انتخاب صندوق ورودی",
+            "ERROR": "صندوق ورودی مورد نیاز است"
+          },
+          "AUDIENCE": {
+            "LABEL": "شنودگان",
+            "PLACEHOLDER": "برچسب های مشتری را انتخاب کنید",
+            "ERROR": "شنودگان ضروری است"
+          },
+          "SCHEDULED_AT": {
+            "LABEL": "زمان برنامه ریزی شده",
+            "PLACEHOLDER": "لطفاً زمان را انتخاب کنید",
+            "ERROR": "زمان برنامه ریزی شده الزامی است"
+          },
+          "BUTTONS": {
+            "CREATE": "ايجاد كردن",
+            "CANCEL": "انصراف"
+          },
+          "API": {
+            "SUCCESS_MESSAGE": "SMS campaign created successfully",
+            "ERROR_MESSAGE": "یک خطای وجود دارد. لطفا دوباره تلاش کنید."
+          }
+        }
+      }
+    },
+    "WHATSAPP": {
+      "HEADER_TITLE": "WhatsApp campaigns",
+      "NEW_CAMPAIGN": "Create campaign",
+      "EMPTY_STATE": {
+        "TITLE": "No WhatsApp campaigns are available",
+        "SUBTITLE": "Launch a WhatsApp campaign to reach your customers directly. Send offers or make announcements with ease. Click 'Create campaign' to get started."
+      },
+      "CARD": {
+        "ANALYTICS": "View analytics",
+        "STATUS": {
+          "PROCESSING": "Processing",
+          "COMPLETED": "تکمیل شد",
+          "SCHEDULED": "Scheduled"
+        },
+        "CAMPAIGN_DETAILS": {
+          "SENT_FROM": "Sent from",
+          "ON": "on"
+        }
+      },
+      "CREATE": {
+        "TITLE": "Create WhatsApp campaign",
+        "CANCEL_BUTTON_TEXT": "انصراف",
+        "CREATE_BUTTON_TEXT": "ايجاد كردن",
+        "FORM": {
+          "TITLE": {
+            "LABEL": "عنوان",
+            "PLACEHOLDER": "لطفا عنوان کمپین را وارد کنید",
+            "ERROR": "عنوان الزامی است"
+          },
+          "INBOX": {
+            "LABEL": "انتخاب صندوق ورودی",
+            "PLACEHOLDER": "انتخاب صندوق ورودی",
+            "ERROR": "صندوق ورودی مورد نیاز است"
+          },
+          "TEMPLATE": {
+            "LABEL": "WhatsApp Template",
+            "PLACEHOLDER": "Select a template",
+            "INFO": "Select a template to use for this campaign.",
+            "ERROR": "Template is required",
+            "PREVIEW_TITLE": "فرآیند {templateName}",
+            "LANGUAGE": "زبان",
+            "CATEGORY": "دسته‌بندی",
+            "VARIABLES_LABEL": "متغیرها",
+            "VARIABLE_PLACEHOLDER": "Enter value for {variable}"
+          },
+          "AUDIENCE": {
+            "LABEL": "شنودگان",
+            "PLACEHOLDER": "برچسب های مشتری را انتخاب کنید",
+            "ERROR": "شنودگان ضروری است"
+          },
+          "SCHEDULED_AT": {
+            "LABEL": "زمان برنامه ریزی شده",
+            "PLACEHOLDER": "لطفاً زمان را انتخاب کنید",
+            "ERROR": "زمان برنامه ریزی شده الزامی است"
+          },
+          "BUTTONS": {
+            "CREATE": "ايجاد كردن",
+            "CANCEL": "انصراف"
+          },
+          "API": {
+            "SUCCESS_MESSAGE": "WhatsApp campaign created successfully",
+            "ERROR_MESSAGE": "یک خطای وجود دارد. لطفا دوباره تلاش کنید."
+          }
+        }
+      },
+      "ANALYTICS": {
+        "LOADING": "Loading analytics...",
+        "EMPTY": "No delivery records found.",
+        "EMPTY_FILTER": "No {status} delivery records found.",
+        "DELIVERIES_ERROR": "Delivery records couldn't be loaded. Refresh the page to try again.",
+        "EMPTY_STATE": {
+          "ERROR": {
+            "TITLE": "Analytics couldn't be loaded",
+            "DESCRIPTION": "Refresh the page to try again."
+          },
+          "PENDING": {
+            "TITLE": "Delivery data will appear once sending begins",
+            "DESCRIPTION": "There are no delivery records for this campaign yet."
+          },
+          "UNAVAILABLE": {
+            "TITLE": "Analytics aren't available for this campaign",
+            "DESCRIPTION": "No delivery data was recorded for this campaign. This can happen for campaigns sent before campaign analytics were introduced."
+          }
+        },
+        "PROCESSING_BANNER": {
+          "DEFAULT": "This campaign is still processing. Analytics will update automatically.",
+          "BOTH": "This campaign is still processing. {queued} messages are queued, and {awaitingUpdate} are awaiting a delivery update from WhatsApp.",
+          "BOTH_SINGLE": "This campaign is still processing. {queued} message is queued, and {awaitingUpdate} is awaiting a delivery update from WhatsApp.",
+          "BOTH_QUEUED_SINGLE": "This campaign is still processing. {queued} message is queued, and {awaitingUpdate} are awaiting a delivery update from WhatsApp.",
+          "BOTH_AWAITING_SINGLE": "This campaign is still processing. {queued} messages are queued, and {awaitingUpdate} is awaiting a delivery update from WhatsApp.",
+          "QUEUED": "This campaign is still processing. {count} message is queued. | This campaign is still processing. {count} messages are queued.",
+          "AWAITING_UPDATE": "This campaign is still processing. {count} message is awaiting a delivery update from WhatsApp. | This campaign is still processing. {count} messages are awaiting a delivery update from WhatsApp.",
+          "COMPLETING": "This campaign is completing. Analytics will update automatically."
+        },
+        "RATE": "{value}% of audience",
+        "SENT_ON": "Sent on {date}",
+        "PAGE_INFO": "Showing {startItem} - {endItem} of {totalItems} contacts",
+        "BREADCRUMB": {
+          "CAMPAIGNS": "کمپین ها",
+          "WHATSAPP": "WhatsApp"
+        },
+        "FILTERS": {
+          "ALL": "همه"
+        },
+        "METRICS": {
+          "AUDIENCE": {
+            "LABEL": "شنودگان",
+            "HINT": "Contacts included in this campaign."
+          },
+          "SENT": {
+            "LABEL": "Submitted to WhatsApp",
+            "HINT": "Messages accepted by WhatsApp for delivery."
+          },
+          "DELIVERED": {
+            "LABEL": "Delivered",
+            "HINT": "Messages that reached the contact's device. Read messages are included."
+          },
+          "READ": {
+            "LABEL": "خوانده شده",
+            "HINT": "Messages opened by the contact."
+          },
+          "FAILED": {
+            "LABEL": "Failed",
+            "HINT": "Messages WhatsApp could not deliver."
+          },
+          "SKIPPED": {
+            "LABEL": "Skipped",
+            "HINT": "Contacts skipped before sending, usually because of a missing or invalid phone number."
+          }
+        },
+        "STATUS": {
+          "QUEUED": "Queued",
+          "SENT": "Awaiting delivery update",
+          "DELIVERED": "Delivered",
+          "READ": "خوانده شده",
+          "FAILED": "Failed",
+          "SKIPPED": "Skipped"
+        },
+        "BREAKDOWN": {
+          "TITLE": "Delivery breakdown",
+          "DELIVERY_RATE": "{value}% delivered",
+          "LEGEND": {
+            "READ": "خوانده شده",
+            "DELIVERED": "Delivered",
+            "FAILED": "Failed",
+            "SKIPPED": "Skipped",
+            "PENDING": "Queued or awaiting update"
+          }
+        },
+        "TABLE": {
+          "TITLE": "Deliveries",
+          "CONTACT": "مخاطب",
+          "STATUS": "وضعیت",
+          "MESSAGE": "پیام",
+          "MESSAGE_NOT_GENERATED": "Not generated",
+          "REASON": "Reason",
+          "ERROR_CODE": "Code {code}"
+        }
+      }
+    },
+    "CONFIRM_DELETE": {
+      "TITLE": "مطمئن هستید که حذف شود?",
+      "DESCRIPTION": "The delete action is permanent and cannot be reversed.",
+      "CONFIRM": "حذف",
+      "API": {
+        "SUCCESS_MESSAGE": "کمپین با موفقیت حذف شد",
+        "ERROR_MESSAGE": "یک خطای وجود دارد. لطفا دوباره تلاش کنید."
+      }
+    }
+  }
+}

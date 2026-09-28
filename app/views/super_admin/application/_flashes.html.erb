@@ -1,0 +1,21 @@
+<%#
+# Flash Partial
+
+This partial renders flash messages on every page.
+
+## Relevant Helpers:
+
+- `flash`:
+  Returns a hash,
+  where the keys are the type of flash (alert, error, notice, etc)
+  and the values are the message to be displayed.
+%>
+
+<% if flash.any? %>
+  <% toast = content_for?(:toast_flashes) %>
+  <div class="flashes <%= "fixed top-[4.5rem] end-6 z-50 w-[calc(100%-2rem)] max-w-[26rem] pointer-events-none" if toast %>" <%= "data-toast-flashes" if toast %>>
+    <% flash.each do |key, value| -%>
+      <div class="flash flash-<%= key %> <%= "pointer-events-auto rounded shadow-lg !text-start transition-opacity duration-300" if toast %>"><%= value.to_s.html_safe %></div>
+    <% end -%>
+  </div>
+<% end %>

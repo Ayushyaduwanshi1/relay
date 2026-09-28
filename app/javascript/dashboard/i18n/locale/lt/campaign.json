@@ -1,0 +1,311 @@
+{
+  "CAMPAIGN": {
+    "LIVE_CHAT": {
+      "HEADER_TITLE": "Live chat campaigns",
+      "NEW_CAMPAIGN": "Create campaign",
+      "CARD": {
+        "STATUS": {
+          "ENABLED": "Leisti",
+          "DISABLED": "Išjungta"
+        },
+        "CAMPAIGN_DETAILS": {
+          "SENT_BY": "Siuntėjas",
+          "BOT": "Botas",
+          "FROM": "nuo",
+          "URL": "URL:"
+        }
+      },
+      "EMPTY_STATE": {
+        "TITLE": "No live chat campaigns are available",
+        "SUBTITLE": "Connect with your customers using proactive messages.  Click 'Create campaign' to get started."
+      },
+      "CREATE": {
+        "TITLE": "Create a live chat campaign",
+        "CANCEL_BUTTON_TEXT": "Atšaukti",
+        "CREATE_BUTTON_TEXT": "Sukurti",
+        "FORM": {
+          "TITLE": {
+            "LABEL": "Pavadinimas",
+            "PLACEHOLDER": "Įveskite akcijos pavadinimą",
+            "ERROR": "Yra reikalingas pavadinimas"
+          },
+          "MESSAGE": {
+            "LABEL": "Žinutė",
+            "PLACEHOLDER": "Įveskite akcijos pranešimą",
+            "ERROR": "Yra reikalingas pranešimas"
+          },
+          "INBOX": {
+            "LABEL": "Pasirinkti gautų laiškų aplanką",
+            "PLACEHOLDER": "Pasirinkti gautų laiškų aplanką",
+            "ERROR": "Yra reikalingas gautų laiškų aplankas"
+          },
+          "SENT_BY": {
+            "LABEL": "Siuntėjas",
+            "PLACEHOLDER": "Please select sender",
+            "ERROR": "Yra reikalingas siuntėjas"
+          },
+          "END_POINT": {
+            "LABEL": "URL",
+            "PLACEHOLDER": "Prašome įvesti URL adresą",
+            "ERROR": "Prašome įvesti tesingą URL adresą"
+          },
+          "TIME_ON_PAGE": {
+            "LABEL": "Laikas puslapyje (sekundės)",
+            "PLACEHOLDER": "Prašome įvesti laiką",
+            "ERROR": "Nurodykite laiką puslapyje"
+          },
+          "OTHER_PREFERENCES": {
+            "TITLE": "Other preferences",
+            "ENABLED": "Leisti akciją",
+            "TRIGGER_ONLY_BUSINESS_HOURS": "Aktyvuokite tik darbo valandomis"
+          },
+          "BUTTONS": {
+            "CREATE": "Sukurti",
+            "CANCEL": "Atšaukti"
+          },
+          "API": {
+            "SUCCESS_MESSAGE": "Live chat campaign created successfully",
+            "ERROR_MESSAGE": "Įvyko klaida. Prašau, pabandykite dar kartą."
+          }
+        }
+      },
+      "EDIT": {
+        "TITLE": "Edit live chat campaign",
+        "FORM": {
+          "API": {
+            "SUCCESS_MESSAGE": "Live chat campaign updated successfully",
+            "ERROR_MESSAGE": "Įvyko klaida. Prašau, pabandykite dar kartą."
+          }
+        }
+      }
+    },
+    "SMS": {
+      "HEADER_TITLE": "SMS campaigns",
+      "NEW_CAMPAIGN": "Create campaign",
+      "EMPTY_STATE": {
+        "TITLE": "No SMS campaigns are available",
+        "SUBTITLE": "Launch an SMS campaign to reach your customers directly. Send offers or make announcements with ease. Click 'Create campaign' to get started."
+      },
+      "CARD": {
+        "STATUS": {
+          "PROCESSING": "Processing",
+          "COMPLETED": "Užbaigta",
+          "SCHEDULED": "Scheduled"
+        },
+        "CAMPAIGN_DETAILS": {
+          "SENT_FROM": "Sent from",
+          "ON": "on"
+        }
+      },
+      "CREATE": {
+        "TITLE": "Create SMS campaign",
+        "CANCEL_BUTTON_TEXT": "Atšaukti",
+        "CREATE_BUTTON_TEXT": "Sukurti",
+        "FORM": {
+          "TITLE": {
+            "LABEL": "Pavadinimas",
+            "PLACEHOLDER": "Įveskite akcijos pavadinimą",
+            "ERROR": "Yra reikalingas pavadinimas"
+          },
+          "MESSAGE": {
+            "LABEL": "Žinutė",
+            "PLACEHOLDER": "Įveskite akcijos pranešimą",
+            "ERROR": "Yra reikalingas pranešimas"
+          },
+          "INBOX": {
+            "LABEL": "Pasirinkti gautų laiškų aplanką",
+            "PLACEHOLDER": "Pasirinkti gautų laiškų aplanką",
+            "ERROR": "Yra reikalingas gautų laiškų aplankas"
+          },
+          "AUDIENCE": {
+            "LABEL": "Auditorija",
+            "PLACEHOLDER": "Pažymėti klieto etiketes",
+            "ERROR": "Reikalinga auditorija"
+          },
+          "SCHEDULED_AT": {
+            "LABEL": "Suplanuotas laikas",
+            "PLACEHOLDER": "Prašau pasirinkti laiką",
+            "ERROR": "Būtinas suplanuotas laikas"
+          },
+          "BUTTONS": {
+            "CREATE": "Sukurti",
+            "CANCEL": "Atšaukti"
+          },
+          "API": {
+            "SUCCESS_MESSAGE": "SMS campaign created successfully",
+            "ERROR_MESSAGE": "Įvyko klaida. Prašau, pabandykite dar kartą."
+          }
+        }
+      }
+    },
+    "WHATSAPP": {
+      "HEADER_TITLE": "WhatsApp campaigns",
+      "NEW_CAMPAIGN": "Create campaign",
+      "EMPTY_STATE": {
+        "TITLE": "No WhatsApp campaigns are available",
+        "SUBTITLE": "Launch a WhatsApp campaign to reach your customers directly. Send offers or make announcements with ease. Click 'Create campaign' to get started."
+      },
+      "CARD": {
+        "ANALYTICS": "View analytics",
+        "STATUS": {
+          "PROCESSING": "Processing",
+          "COMPLETED": "Užbaigta",
+          "SCHEDULED": "Scheduled"
+        },
+        "CAMPAIGN_DETAILS": {
+          "SENT_FROM": "Sent from",
+          "ON": "on"
+        }
+      },
+      "CREATE": {
+        "TITLE": "Create WhatsApp campaign",
+        "CANCEL_BUTTON_TEXT": "Atšaukti",
+        "CREATE_BUTTON_TEXT": "Sukurti",
+        "FORM": {
+          "TITLE": {
+            "LABEL": "Pavadinimas",
+            "PLACEHOLDER": "Įveskite akcijos pavadinimą",
+            "ERROR": "Yra reikalingas pavadinimas"
+          },
+          "INBOX": {
+            "LABEL": "Pasirinkti gautų laiškų aplanką",
+            "PLACEHOLDER": "Pasirinkti gautų laiškų aplanką",
+            "ERROR": "Yra reikalingas gautų laiškų aplankas"
+          },
+          "TEMPLATE": {
+            "LABEL": "WhatsApp Template",
+            "PLACEHOLDER": "Select a template",
+            "INFO": "Select a template to use for this campaign.",
+            "ERROR": "Template is required",
+            "PREVIEW_TITLE": "Apdoroti {templateName}",
+            "LANGUAGE": "Kalba",
+            "CATEGORY": "Kategorija",
+            "VARIABLES_LABEL": "Kintamieji",
+            "VARIABLE_PLACEHOLDER": "Enter value for {variable}"
+          },
+          "AUDIENCE": {
+            "LABEL": "Auditorija",
+            "PLACEHOLDER": "Pažymėti klieto etiketes",
+            "ERROR": "Reikalinga auditorija"
+          },
+          "SCHEDULED_AT": {
+            "LABEL": "Suplanuotas laikas",
+            "PLACEHOLDER": "Prašau pasirinkti laiką",
+            "ERROR": "Būtinas suplanuotas laikas"
+          },
+          "BUTTONS": {
+            "CREATE": "Sukurti",
+            "CANCEL": "Atšaukti"
+          },
+          "API": {
+            "SUCCESS_MESSAGE": "WhatsApp campaign created successfully",
+            "ERROR_MESSAGE": "Įvyko klaida. Prašau, pabandykite dar kartą."
+          }
+        }
+      },
+      "ANALYTICS": {
+        "LOADING": "Loading analytics...",
+        "EMPTY": "No delivery records found.",
+        "EMPTY_FILTER": "No {status} delivery records found.",
+        "DELIVERIES_ERROR": "Delivery records couldn't be loaded. Refresh the page to try again.",
+        "EMPTY_STATE": {
+          "ERROR": {
+            "TITLE": "Analytics couldn't be loaded",
+            "DESCRIPTION": "Refresh the page to try again."
+          },
+          "PENDING": {
+            "TITLE": "Delivery data will appear once sending begins",
+            "DESCRIPTION": "There are no delivery records for this campaign yet."
+          },
+          "UNAVAILABLE": {
+            "TITLE": "Analytics aren't available for this campaign",
+            "DESCRIPTION": "No delivery data was recorded for this campaign. This can happen for campaigns sent before campaign analytics were introduced."
+          }
+        },
+        "PROCESSING_BANNER": {
+          "DEFAULT": "This campaign is still processing. Analytics will update automatically.",
+          "BOTH": "This campaign is still processing. {queued} messages are queued, and {awaitingUpdate} are awaiting a delivery update from WhatsApp.",
+          "BOTH_SINGLE": "This campaign is still processing. {queued} message is queued, and {awaitingUpdate} is awaiting a delivery update from WhatsApp.",
+          "BOTH_QUEUED_SINGLE": "This campaign is still processing. {queued} message is queued, and {awaitingUpdate} are awaiting a delivery update from WhatsApp.",
+          "BOTH_AWAITING_SINGLE": "This campaign is still processing. {queued} messages are queued, and {awaitingUpdate} is awaiting a delivery update from WhatsApp.",
+          "QUEUED": "This campaign is still processing. {count} message is queued. | This campaign is still processing. {count} messages are queued.",
+          "AWAITING_UPDATE": "This campaign is still processing. {count} message is awaiting a delivery update from WhatsApp. | This campaign is still processing. {count} messages are awaiting a delivery update from WhatsApp.",
+          "COMPLETING": "This campaign is completing. Analytics will update automatically."
+        },
+        "RATE": "{value}% of audience",
+        "SENT_ON": "Sent on {date}",
+        "PAGE_INFO": "Showing {startItem} - {endItem} of {totalItems} contacts",
+        "BREADCRUMB": {
+          "CAMPAIGNS": "Akcijos",
+          "WHATSAPP": "WhatsApp"
+        },
+        "FILTERS": {
+          "ALL": "Visi"
+        },
+        "METRICS": {
+          "AUDIENCE": {
+            "LABEL": "Auditorija",
+            "HINT": "Contacts included in this campaign."
+          },
+          "SENT": {
+            "LABEL": "Submitted to WhatsApp",
+            "HINT": "Messages accepted by WhatsApp for delivery."
+          },
+          "DELIVERED": {
+            "LABEL": "Delivered",
+            "HINT": "Messages that reached the contact's device. Read messages are included."
+          },
+          "READ": {
+            "LABEL": "Skaityti",
+            "HINT": "Messages opened by the contact."
+          },
+          "FAILED": {
+            "LABEL": "Failed",
+            "HINT": "Messages WhatsApp could not deliver."
+          },
+          "SKIPPED": {
+            "LABEL": "Skipped",
+            "HINT": "Contacts skipped before sending, usually because of a missing or invalid phone number."
+          }
+        },
+        "STATUS": {
+          "QUEUED": "Queued",
+          "SENT": "Awaiting delivery update",
+          "DELIVERED": "Delivered",
+          "READ": "Skaityti",
+          "FAILED": "Failed",
+          "SKIPPED": "Skipped"
+        },
+        "BREAKDOWN": {
+          "TITLE": "Delivery breakdown",
+          "DELIVERY_RATE": "{value}% delivered",
+          "LEGEND": {
+            "READ": "Skaityti",
+            "DELIVERED": "Delivered",
+            "FAILED": "Failed",
+            "SKIPPED": "Skipped",
+            "PENDING": "Queued or awaiting update"
+          }
+        },
+        "TABLE": {
+          "TITLE": "Deliveries",
+          "CONTACT": "Kontaktas",
+          "STATUS": "Būsena",
+          "MESSAGE": "Žinutė",
+          "MESSAGE_NOT_GENERATED": "Not generated",
+          "REASON": "Reason",
+          "ERROR_CODE": "Code {code}"
+        }
+      }
+    },
+    "CONFIRM_DELETE": {
+      "TITLE": "Ar tikrai norite ištrinti?",
+      "DESCRIPTION": "The delete action is permanent and cannot be reversed.",
+      "CONFIRM": "Ištrinti",
+      "API": {
+        "SUCCESS_MESSAGE": "Akcija ištrinta sėkmingai",
+        "ERROR_MESSAGE": "Įvyko klaida. Prašau, pabandykite dar kartą."
+      }
+    }
+  }
+}

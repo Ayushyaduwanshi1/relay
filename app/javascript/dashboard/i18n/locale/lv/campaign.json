@@ -1,0 +1,311 @@
+{
+  "CAMPAIGN": {
+    "LIVE_CHAT": {
+      "HEADER_TITLE": "Tiešraides tērzēšanas kampaņas",
+      "NEW_CAMPAIGN": "Izveidot kampaņu",
+      "CARD": {
+        "STATUS": {
+          "ENABLED": "Iespējots",
+          "DISABLED": "Atspējots"
+        },
+        "CAMPAIGN_DETAILS": {
+          "SENT_BY": "Sūtīja",
+          "BOT": "Bot",
+          "FROM": "no",
+          "URL": "URL:"
+        }
+      },
+      "EMPTY_STATE": {
+        "TITLE": "Nav pieejama neviena tiešsaistes tērzēšanas kampaņa",
+        "SUBTITLE": "Sazinieties ar saviem klientiem, izmantojot proaktīvus ziņojumus. Lai sāktu, noklikšķiniet uz \"Izveidot kampaņu\"."
+      },
+      "CREATE": {
+        "TITLE": "Izveidot tiešraides tērzēšanas kampaņu",
+        "CANCEL_BUTTON_TEXT": "Atcelt",
+        "CREATE_BUTTON_TEXT": "Izveidot",
+        "FORM": {
+          "TITLE": {
+            "LABEL": "Nosaukums",
+            "PLACEHOLDER": "Lūdzu, ievadiet kampaņas nosaukumu",
+            "ERROR": "Nepieciešams nosaukums"
+          },
+          "MESSAGE": {
+            "LABEL": "Ziņojums",
+            "PLACEHOLDER": "Lūdzu, ievadiet kampaņas ziņojumu",
+            "ERROR": "Nepieciešams ziņojums"
+          },
+          "INBOX": {
+            "LABEL": "Izvēlieties Iesūtni",
+            "PLACEHOLDER": "Izvēlieties Iesūtni",
+            "ERROR": "Nepieciešama iesūtne"
+          },
+          "SENT_BY": {
+            "LABEL": "Sūtīja",
+            "PLACEHOLDER": "Lūdzu, atlasiet sūtītāju",
+            "ERROR": "Nepieciešams sūtītājs"
+          },
+          "END_POINT": {
+            "LABEL": "URL",
+            "PLACEHOLDER": "Lūdzu, ievadiet URL",
+            "ERROR": "Lūdzu, ievadiet derīgu URL"
+          },
+          "TIME_ON_PAGE": {
+            "LABEL": "Lapā pavadītais laiks (Sekundes)",
+            "PLACEHOLDER": "Lūdzu, ievadiet laiku",
+            "ERROR": "Nepieciešams lapā pavadītais laiks"
+          },
+          "OTHER_PREFERENCES": {
+            "TITLE": "Citas preferences",
+            "ENABLED": "Iespējot kampaņu",
+            "TRIGGER_ONLY_BUSINESS_HOURS": "Aktivizēt tikai darba laikā"
+          },
+          "BUTTONS": {
+            "CREATE": "Izveidot",
+            "CANCEL": "Atcelt"
+          },
+          "API": {
+            "SUCCESS_MESSAGE": "Tiešraides tērzēšanas kampaņa ir veiksmīgi izveidota",
+            "ERROR_MESSAGE": "Radās kļūda. Lūdzu mēģiniet vēlreiz."
+          }
+        }
+      },
+      "EDIT": {
+        "TITLE": "Rediģēt tiešsaistes tērzēšanas kampaņu",
+        "FORM": {
+          "API": {
+            "SUCCESS_MESSAGE": "Tiešraides tērzēšanas kampaņa ir veiksmīgi atjaunināta",
+            "ERROR_MESSAGE": "Radās kļūda. Lūdzu mēģiniet vēlreiz."
+          }
+        }
+      }
+    },
+    "SMS": {
+      "HEADER_TITLE": "SMS kampaņas",
+      "NEW_CAMPAIGN": "Izveidot kampaņu",
+      "EMPTY_STATE": {
+        "TITLE": "SMS kampaņas nav pieejamas",
+        "SUBTITLE": "Uzsāciet SMS kampaņu, lai tieši sasniegtu savus klientus. Viegli nosūtiet piedāvājumus vai paziņojumus. Lai sāktu, noklikšķiniet uz \"Izveidot kampaņu\"."
+      },
+      "CARD": {
+        "STATUS": {
+          "PROCESSING": "Processing",
+          "COMPLETED": "Pabeigts",
+          "SCHEDULED": "Plānots"
+        },
+        "CAMPAIGN_DETAILS": {
+          "SENT_FROM": "Nosūtīts no",
+          "ON": ""
+        }
+      },
+      "CREATE": {
+        "TITLE": "Izveidot SMS kampaņu",
+        "CANCEL_BUTTON_TEXT": "Atcelt",
+        "CREATE_BUTTON_TEXT": "Izveidot",
+        "FORM": {
+          "TITLE": {
+            "LABEL": "Nosaukums",
+            "PLACEHOLDER": "Lūdzu, ievadiet kampaņas nosaukumu",
+            "ERROR": "Nepieciešams nosaukums"
+          },
+          "MESSAGE": {
+            "LABEL": "Ziņojums",
+            "PLACEHOLDER": "Lūdzu, ievadiet kampaņas ziņojumu",
+            "ERROR": "Nepieciešams ziņojums"
+          },
+          "INBOX": {
+            "LABEL": "Izvēlieties Iesūtni",
+            "PLACEHOLDER": "Izvēlieties Iesūtni",
+            "ERROR": "Nepieciešama iesūtne"
+          },
+          "AUDIENCE": {
+            "LABEL": "Auditorija",
+            "PLACEHOLDER": "Izvēlieties klientu etiķetes",
+            "ERROR": "Nepieciešama auditorija"
+          },
+          "SCHEDULED_AT": {
+            "LABEL": "Plānotais laiks",
+            "PLACEHOLDER": "Lūdzu, izvēlieties laiku",
+            "ERROR": "Nepieciešams ieplānotais laiks"
+          },
+          "BUTTONS": {
+            "CREATE": "Izveidot",
+            "CANCEL": "Atcelt"
+          },
+          "API": {
+            "SUCCESS_MESSAGE": "SMS kampaņa veiksmīgi izveidota",
+            "ERROR_MESSAGE": "Radās kļūda. Lūdzu mēģiniet vēlreiz."
+          }
+        }
+      }
+    },
+    "WHATSAPP": {
+      "HEADER_TITLE": "WhatsApp campaigns",
+      "NEW_CAMPAIGN": "Izveidot kampaņu",
+      "EMPTY_STATE": {
+        "TITLE": "No WhatsApp campaigns are available",
+        "SUBTITLE": "Launch a WhatsApp campaign to reach your customers directly. Send offers or make announcements with ease. Click 'Create campaign' to get started."
+      },
+      "CARD": {
+        "ANALYTICS": "View analytics",
+        "STATUS": {
+          "PROCESSING": "Processing",
+          "COMPLETED": "Pabeigts",
+          "SCHEDULED": "Plānots"
+        },
+        "CAMPAIGN_DETAILS": {
+          "SENT_FROM": "Nosūtīts no",
+          "ON": ""
+        }
+      },
+      "CREATE": {
+        "TITLE": "Create WhatsApp campaign",
+        "CANCEL_BUTTON_TEXT": "Atcelt",
+        "CREATE_BUTTON_TEXT": "Izveidot",
+        "FORM": {
+          "TITLE": {
+            "LABEL": "Nosaukums",
+            "PLACEHOLDER": "Lūdzu, ievadiet kampaņas nosaukumu",
+            "ERROR": "Nepieciešams nosaukums"
+          },
+          "INBOX": {
+            "LABEL": "Izvēlieties Iesūtni",
+            "PLACEHOLDER": "Izvēlieties Iesūtni",
+            "ERROR": "Nepieciešama iesūtne"
+          },
+          "TEMPLATE": {
+            "LABEL": "WhatsApp Template",
+            "PLACEHOLDER": "Select a template",
+            "INFO": "Select a template to use for this campaign.",
+            "ERROR": "Template is required",
+            "PREVIEW_TITLE": "Apstrādāt {templateName}",
+            "LANGUAGE": "Valoda",
+            "CATEGORY": "Kategorija",
+            "VARIABLES_LABEL": "Mainīgie",
+            "VARIABLE_PLACEHOLDER": "Enter value for {variable}"
+          },
+          "AUDIENCE": {
+            "LABEL": "Auditorija",
+            "PLACEHOLDER": "Izvēlieties klientu etiķetes",
+            "ERROR": "Nepieciešama auditorija"
+          },
+          "SCHEDULED_AT": {
+            "LABEL": "Plānotais laiks",
+            "PLACEHOLDER": "Lūdzu, izvēlieties laiku",
+            "ERROR": "Nepieciešams ieplānotais laiks"
+          },
+          "BUTTONS": {
+            "CREATE": "Izveidot",
+            "CANCEL": "Atcelt"
+          },
+          "API": {
+            "SUCCESS_MESSAGE": "WhatsApp campaign created successfully",
+            "ERROR_MESSAGE": "Radās kļūda. Lūdzu mēģiniet vēlreiz."
+          }
+        }
+      },
+      "ANALYTICS": {
+        "LOADING": "Loading analytics...",
+        "EMPTY": "No delivery records found.",
+        "EMPTY_FILTER": "No {status} delivery records found.",
+        "DELIVERIES_ERROR": "Delivery records couldn't be loaded. Refresh the page to try again.",
+        "EMPTY_STATE": {
+          "ERROR": {
+            "TITLE": "Analytics couldn't be loaded",
+            "DESCRIPTION": "Refresh the page to try again."
+          },
+          "PENDING": {
+            "TITLE": "Delivery data will appear once sending begins",
+            "DESCRIPTION": "There are no delivery records for this campaign yet."
+          },
+          "UNAVAILABLE": {
+            "TITLE": "Analytics aren't available for this campaign",
+            "DESCRIPTION": "No delivery data was recorded for this campaign. This can happen for campaigns sent before campaign analytics were introduced."
+          }
+        },
+        "PROCESSING_BANNER": {
+          "DEFAULT": "This campaign is still processing. Analytics will update automatically.",
+          "BOTH": "This campaign is still processing. {queued} messages are queued, and {awaitingUpdate} are awaiting a delivery update from WhatsApp.",
+          "BOTH_SINGLE": "This campaign is still processing. {queued} message is queued, and {awaitingUpdate} is awaiting a delivery update from WhatsApp.",
+          "BOTH_QUEUED_SINGLE": "This campaign is still processing. {queued} message is queued, and {awaitingUpdate} are awaiting a delivery update from WhatsApp.",
+          "BOTH_AWAITING_SINGLE": "This campaign is still processing. {queued} messages are queued, and {awaitingUpdate} is awaiting a delivery update from WhatsApp.",
+          "QUEUED": "This campaign is still processing. {count} message is queued. | This campaign is still processing. {count} messages are queued.",
+          "AWAITING_UPDATE": "This campaign is still processing. {count} message is awaiting a delivery update from WhatsApp. | This campaign is still processing. {count} messages are awaiting a delivery update from WhatsApp.",
+          "COMPLETING": "This campaign is completing. Analytics will update automatically."
+        },
+        "RATE": "{value}% of audience",
+        "SENT_ON": "Sent on {date}",
+        "PAGE_INFO": "Rāda {startItem} - {endItem} no {totalItems} kontaktpersonām",
+        "BREADCRUMB": {
+          "CAMPAIGNS": "Kampaņas",
+          "WHATSAPP": "WhatsApp"
+        },
+        "FILTERS": {
+          "ALL": "Visi"
+        },
+        "METRICS": {
+          "AUDIENCE": {
+            "LABEL": "Auditorija",
+            "HINT": "Contacts included in this campaign."
+          },
+          "SENT": {
+            "LABEL": "Submitted to WhatsApp",
+            "HINT": "Messages accepted by WhatsApp for delivery."
+          },
+          "DELIVERED": {
+            "LABEL": "Delivered",
+            "HINT": "Messages that reached the contact's device. Read messages are included."
+          },
+          "READ": {
+            "LABEL": "Lasīt",
+            "HINT": "Messages opened by the contact."
+          },
+          "FAILED": {
+            "LABEL": "Failed",
+            "HINT": "Messages WhatsApp could not deliver."
+          },
+          "SKIPPED": {
+            "LABEL": "Skipped",
+            "HINT": "Contacts skipped before sending, usually because of a missing or invalid phone number."
+          }
+        },
+        "STATUS": {
+          "QUEUED": "Queued",
+          "SENT": "Awaiting delivery update",
+          "DELIVERED": "Delivered",
+          "READ": "Lasīt",
+          "FAILED": "Failed",
+          "SKIPPED": "Skipped"
+        },
+        "BREAKDOWN": {
+          "TITLE": "Delivery breakdown",
+          "DELIVERY_RATE": "{value}% delivered",
+          "LEGEND": {
+            "READ": "Lasīt",
+            "DELIVERED": "Delivered",
+            "FAILED": "Failed",
+            "SKIPPED": "Skipped",
+            "PENDING": "Queued or awaiting update"
+          }
+        },
+        "TABLE": {
+          "TITLE": "Deliveries",
+          "CONTACT": "Kontaktpersona",
+          "STATUS": "Statuss",
+          "MESSAGE": "Ziņojums",
+          "MESSAGE_NOT_GENERATED": "Not generated",
+          "REASON": "Reason",
+          "ERROR_CODE": "Code {code}"
+        }
+      }
+    },
+    "CONFIRM_DELETE": {
+      "TITLE": "Vai tiešām vēlaties izdzēst?",
+      "DESCRIPTION": "Dzēšanas darbība ir neatgriezeniska, un to nevar atsaukt.",
+      "CONFIRM": "Dzēst",
+      "API": {
+        "SUCCESS_MESSAGE": "Kampaņa ir veiksmīgi izdzēsta",
+        "ERROR_MESSAGE": "Radās kļūda. Lūdzu mēģiniet vēlreiz."
+      }
+    }
+  }
+}
