@@ -14,4 +14,7 @@ export default defineConfig({
     },
   },
   resolve: { alias: aliases },
+  build: {
+    sourcemap: false,
+  },
 });

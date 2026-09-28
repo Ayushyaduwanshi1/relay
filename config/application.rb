@@ -13,6 +13,11 @@ Bundler.require(*Rails.groups)
 # We need these environment variables to load the specific APM agent
 Dotenv::Rails.overwrite = true
 Dotenv::Rails.load
+
+node_options = ENV['NODE_OPTIONS'].to_s
+unless node_options.include?('--max-old-space-size')
+  ENV['NODE_OPTIONS'] = [node_options, '--max-old-space-size=4096'].reject(&:empty?).join(' ')
+end
 require 'datadog' if ENV.fetch('DD_TRACE_AGENT_URL', false).present?
 require 'elastic-apm' if ENV.fetch('ELASTIC_APM_SECRET_TOKEN', false).present?
 require 'scout_apm' if ENV.fetch('SCOUT_KEY', false).present?
