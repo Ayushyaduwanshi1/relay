@@ -16,10 +16,13 @@ class ApplicationMailer < ActionMailer::Base
     end
   end
 
-  rescue_from(*ExceptionList::SMTP_EXCEPTIONS, with: :handle_smtp_exceptions)
+  rescue_from(*ExceptionList::SMTP_EXCEPTIONS, ResendDeliveryMethod::DeliveryError, with: :handle_smtp_exceptions)
 
   def smtp_config_set_or_development?
-    ENV.fetch('SMTP_ADDRESS', nil).present? || Rails.env.development?
+    ENV.fetch('SMTP_ADDRESS', nil).present? ||
+      ENV.fetch('RESEND_API_KEY', nil).present? ||
+      ActionMailer::Base.delivery_method == :resend ||
+      Rails.env.development?
   end
 
   private

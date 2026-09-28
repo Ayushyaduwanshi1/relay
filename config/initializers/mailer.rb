@@ -6,30 +6,29 @@ Rails.application.configure do
   #########################################
 
   # Frontend URL used in confirmation/password reset emails
-  config.action_mailer.default_url_options = {
-    host: ENV['FRONTEND_URL']
-  } if ENV['FRONTEND_URL'].present?
+  if ENV['FRONTEND_URL'].present?
+    config.action_mailer.default_url_options = {
+      host: ENV['FRONTEND_URL']
+    }
+  end
 
   config.action_mailer.perform_caching = false
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
 
   #########################################
-  # Resend / SMTP Delivery
+  # Resend Delivery Method Registration
   #########################################
 
   ActionMailer::Base.add_delivery_method(
     :resend,
     ResendDeliveryMethod,
-    api_key: ENV['RESEND_API_KEY']
+    api_key: ENV.fetch('RESEND_API_KEY', nil)
   )
-
-  config.action_mailer.delivery_method =
-    ENV.fetch('MAIL_DELIVERY_METHOD', 'smtp').to_sym unless Rails.env.test?
 
   #########################################
   # SMTP Configuration
-  # Kept as fallback
+  # Kept as fallback or primary
   #########################################
 
   smtp_settings = {
@@ -37,11 +36,15 @@ Rails.application.configure do
     port: ENV.fetch('SMTP_PORT', 587)
   }
 
-  smtp_settings[:authentication] =
-    ENV.fetch('SMTP_AUTHENTICATION', 'login').to_sym if ENV['SMTP_AUTHENTICATION'].present?
+  if ENV['SMTP_AUTHENTICATION'].present?
+    smtp_settings[:authentication] =
+      ENV.fetch('SMTP_AUTHENTICATION', 'login').to_sym
+  end
 
-  smtp_settings[:domain] =
-    ENV['SMTP_DOMAIN'] if ENV['SMTP_DOMAIN'].present?
+  if ENV['SMTP_DOMAIN'].present?
+    smtp_settings[:domain] =
+      ENV['SMTP_DOMAIN']
+  end
 
   smtp_settings[:user_name] =
     ENV.fetch('SMTP_USERNAME', nil)
@@ -54,31 +57,53 @@ Rails.application.configure do
       ENV.fetch('SMTP_ENABLE_STARTTLS_AUTO', true)
     )
 
-  smtp_settings[:openssl_verify_mode] =
-    ENV['SMTP_OPENSSL_VERIFY_MODE'] if ENV['SMTP_OPENSSL_VERIFY_MODE'].present?
+  if ENV['SMTP_OPENSSL_VERIFY_MODE'].present?
+    smtp_settings[:openssl_verify_mode] =
+      ENV['SMTP_OPENSSL_VERIFY_MODE']
+  end
 
-  smtp_settings[:ssl] =
-    ActiveModel::Type::Boolean.new.cast(ENV['SMTP_SSL']) if ENV['SMTP_SSL']
+  if ENV['SMTP_SSL']
+    smtp_settings[:ssl] =
+      ActiveModel::Type::Boolean.new.cast(ENV['SMTP_SSL'])
+  end
 
-  smtp_settings[:tls] =
-    ActiveModel::Type::Boolean.new.cast(ENV['SMTP_TLS']) if ENV['SMTP_TLS']
+  if ENV['SMTP_TLS']
+    smtp_settings[:tls] =
+      ActiveModel::Type::Boolean.new.cast(ENV['SMTP_TLS'])
+  end
 
-  smtp_settings[:open_timeout] =
-    ENV['SMTP_OPEN_TIMEOUT'].to_i if ENV['SMTP_OPEN_TIMEOUT'].present?
+  if ENV['SMTP_OPEN_TIMEOUT'].present?
+    smtp_settings[:open_timeout] =
+      ENV['SMTP_OPEN_TIMEOUT'].to_i
+  end
 
-  smtp_settings[:read_timeout] =
-    ENV['SMTP_READ_TIMEOUT'].to_i if ENV['SMTP_READ_TIMEOUT'].present?
+  if ENV['SMTP_READ_TIMEOUT'].present?
+    smtp_settings[:read_timeout] =
+      ENV['SMTP_READ_TIMEOUT'].to_i
+  end
 
   config.action_mailer.smtp_settings = smtp_settings
 
   #########################################
-  # Sendmail / Letter Opener
+  # Delivery Method Selection
   #########################################
 
-  config.action_mailer.delivery_method = :sendmail if ENV['SMTP_ADDRESS'].blank?
+  delivery_method = ENV.fetch('MAIL_DELIVERY_METHOD', nil)&.to_sym
 
-  config.action_mailer.delivery_method = :letter_opener if
-    Rails.env.development? && ENV['LETTER_OPENER']
+  # Auto-select delivery method if not explicitly set:
+  # - If RESEND_API_KEY is present and SMTP_ADDRESS is blank, prefer :resend.
+  # - Otherwise default to :smtp.
+  delivery_method ||= if ENV['RESEND_API_KEY'].present? && ENV['SMTP_ADDRESS'].blank?
+                        :resend
+                      else
+                        :smtp
+                      end
+
+  delivery_method = :sendmail if delivery_method == :smtp && ENV['SMTP_ADDRESS'].blank?
+
+  delivery_method = :letter_opener if Rails.env.development? && ENV['LETTER_OPENER']
+
+  config.action_mailer.delivery_method = delivery_method unless Rails.env.test?
 
   #########################################
   # Action Mailbox
@@ -87,7 +112,8 @@ Rails.application.configure do
   config.action_mailbox.ingress =
     ENV.fetch('RAILS_INBOUND_EMAIL_SERVICE', 'relay').to_sym
 
-  config.action_mailbox.ses.subscribed_topic =
-    ENV['ACTION_MAILBOX_SES_SNS_TOPIC'] if
-      ENV['ACTION_MAILBOX_SES_SNS_TOPIC'].present?
+  if ENV['ACTION_MAILBOX_SES_SNS_TOPIC'].present?
+    config.action_mailbox.ses.subscribed_topic =
+      ENV['ACTION_MAILBOX_SES_SNS_TOPIC']
+  end
 end
