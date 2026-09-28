@@ -16,7 +16,13 @@ class Rack::Attack
   # Redis calls like `get` to hit the outer wrapper and explode.
   # `pool: false` tells Rails to skip its internal pool and use ours directly.
   # TODO: We can use build in connection pool in future upgrade
-  Rack::Attack.cache.store = ActiveSupport::Cache::RedisCacheStore.new(redis: $velma, pool: false)
+  Rack::Attack.cache.store = begin
+    Timeout.timeout(1) { $velma.with { |conn| conn.ping } }
+    ActiveSupport::Cache::RedisCacheStore.new(redis: $velma, pool: false)
+  rescue StandardError => e
+    Rails.logger.warn "Rack::Attack Redis unavailable (#{e.message}), falling back to MemoryStore"
+    ActiveSupport::Cache::MemoryStore.new
+  end
 
   class Request < ::Rack::Request
     # You may need to specify a method to fetch the correct remote IP address

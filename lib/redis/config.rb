@@ -10,11 +10,14 @@ module Redis::Config
     end
 
     def base_config
+      redis_url = ENV.fetch('REDIS_URL', 'redis://127.0.0.1:6379')
+      redis_url = 'redis://127.0.0.1:6379' if redis_url.to_s.include?('your-render-redis-internal-url')
+
       {
-        url: ENV.fetch('REDIS_URL', 'redis://127.0.0.1:6379'),
+        url: redis_url,
         password: ENV.fetch('REDIS_PASSWORD', nil).presence,
         ssl_params: { verify_mode: Chatwoot.redis_ssl_verify_mode },
-        reconnect_attempts: 2,
+        reconnect_attempts: 1,
         timeout: 1
       }
     end
