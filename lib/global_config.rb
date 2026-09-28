@@ -25,6 +25,8 @@ class GlobalConfig
         cached_keys = conn.scan_each(match: "#{VERSION}:#{KEY_PREFIX}:*", count: 1000).to_a
         conn.del(*cached_keys) if cached_keys.any?
       end
+    rescue StandardError => e
+      Rails.logger.warn "GlobalConfig.clear_cache skipped: #{e.message}"
     end
 
     private
@@ -39,12 +41,21 @@ class GlobalConfig
 
     def load_from_cache(config_key)
       cache_key = "#{VERSION}:#{KEY_PREFIX}:#{config_key}"
-      cached_value = $alfred.with { |conn| conn.get(cache_key) }
+      cached_value = begin
+        $alfred.with { |conn| conn.get(cache_key) }
+      rescue StandardError => e
+        Rails.logger.warn "GlobalConfig Redis read failed: #{e.message}"
+        nil
+      end
 
       if cached_value.blank?
         value_from_db = db_fallback(config_key)
         cached_value = { value: value_from_db }.to_json
-        $alfred.with { |conn| conn.set(cache_key, cached_value, { ex: DEFAULT_EXPIRY }) }
+        begin
+          $alfred.with { |conn| conn.set(cache_key, cached_value, { ex: DEFAULT_EXPIRY }) }
+        rescue StandardError => e
+          Rails.logger.warn "GlobalConfig Redis write failed: #{e.message}"
+        end
       end
 
       JSON.parse(cached_value)['value']
