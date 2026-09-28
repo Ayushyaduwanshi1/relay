@@ -6,6 +6,23 @@ ConfigLoader.new.process
 if Rails.env.production?
   # Setup Onboarding flow
   Redis::Alfred.set(Redis::Alfred::CHATWOOT_INSTALLATION_ONBOARDING, true)
+
+  admin_email = ENV.fetch('ADMIN_EMAIL', nil)
+  admin_pass = ENV.fetch('ADMIN_PASSWORD', nil)
+
+  if admin_email.present? && admin_pass.present?
+    user = User.from_email(admin_email) || SuperAdmin.new(email: admin_email)
+    user.name = ENV.fetch('ADMIN_NAME', 'Admin')
+    user.password = admin_pass
+    user.type = 'SuperAdmin'
+    user.skip_confirmation!
+    user.save!
+
+    account = Account.first || Account.create!(name: ENV.fetch('INSTALLATION_NAME', 'Relay'))
+    account_user = AccountUser.find_or_initialize_by(account_id: account.id, user_id: user.id)
+    account_user.role = :administrator
+    account_user.save!
+  end
 end
 
 ## Seeds for Local Development

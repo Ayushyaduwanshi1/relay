@@ -28,4 +28,26 @@ db_namespace = namespace :db do
       db_namespace['setup'].invoke
     end
   end
+
+  desc 'Seeds or updates default admin user'
+  task seed_admin: :environment do
+    email = ENV.fetch('ADMIN_EMAIL', 'ayush1010yadav2020@gmail.com')
+    password = ENV.fetch('ADMIN_PASSWORD', 'Password123!')
+    name = ENV.fetch('ADMIN_NAME', 'Admin')
+
+    account = Account.first || Account.create!(name: ENV.fetch('INSTALLATION_NAME', 'Relay'))
+
+    user = User.from_email(email) || SuperAdmin.new(email: email)
+    user.name = name
+    user.password = password
+    user.type = 'SuperAdmin'
+    user.skip_confirmation!
+    user.save!
+
+    account_user = AccountUser.find_or_initialize_by(account_id: account.id, user_id: user.id)
+    account_user.role = :administrator
+    account_user.save!
+
+    puts "Admin successfully created/updated: #{user.email} (Password: #{password})"
+  end
 end

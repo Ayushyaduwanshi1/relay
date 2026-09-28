@@ -1,3 +1,5 @@
+require Rails.root.join('lib/resend_delivery_method')
+
 class ApplicationMailer < ActionMailer::Base
   include ActionView::Helpers::SanitizeHelper
 
@@ -16,7 +18,7 @@ class ApplicationMailer < ActionMailer::Base
     end
   end
 
-  rescue_from(*ExceptionList::SMTP_EXCEPTIONS, ResendDeliveryMethod::DeliveryError, with: :handle_smtp_exceptions)
+  rescue_from(*ExceptionList::SMTP_EXCEPTIONS, 'ResendDeliveryMethod::DeliveryError', with: :handle_smtp_exceptions)
 
   def smtp_config_set_or_development?
     ENV.fetch('SMTP_ADDRESS', nil).present? ||

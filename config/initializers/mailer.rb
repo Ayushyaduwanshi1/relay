@@ -33,7 +33,7 @@ Rails.application.configure do
 
   smtp_settings = {
     address: ENV.fetch('SMTP_ADDRESS', 'localhost'),
-    port: ENV.fetch('SMTP_PORT', 587)
+    port: ENV.fetch('SMTP_PORT', 587).to_i
   }
 
   if ENV['SMTP_AUTHENTICATION'].present?
@@ -83,6 +83,7 @@ Rails.application.configure do
   end
 
   config.action_mailer.smtp_settings = smtp_settings
+  ActionMailer::Base.smtp_settings = smtp_settings
 
   #########################################
   # Delivery Method Selection
@@ -103,7 +104,10 @@ Rails.application.configure do
 
   delivery_method = :letter_opener if Rails.env.development? && ENV['LETTER_OPENER']
 
-  config.action_mailer.delivery_method = delivery_method unless Rails.env.test?
+  unless Rails.env.test?
+    config.action_mailer.delivery_method = delivery_method
+    ActionMailer::Base.delivery_method = delivery_method
+  end
 
   #########################################
   # Action Mailbox
