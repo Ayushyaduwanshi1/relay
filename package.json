@@ -12,6 +12,7 @@
     "start:test": "RAILS_ENV=test foreman start -f ./Procfile.test",
     "dev": "rm -f ./.overmind.sock && overmind start -f ./Procfile.dev",
     "ruby:prettier": "bundle exec rubocop -a",
+    "build": "vite build --config vite.lib.config.ts",
     "build:sdk": "vite build --config vite.lib.config.ts",
     "analyze:bundles": "pnpm analyze:bundle:sdk && pnpm analyze:bundle:widget",
     "analyze:bundle:sdk": "vite build --config vite.sdk.analyze.config.mts",
