@@ -1,17 +1,32 @@
 # loading installation configs
-GlobalConfig.clear_cache
-ConfigLoader.new.process
+begin
+  GlobalConfig.clear_cache
+rescue StandardError => e
+  Rails.logger.warn "GlobalConfig.clear_cache skipped: #{e.message}"
+end
+
+begin
+  ConfigLoader.new.process
+rescue StandardError => e
+  Rails.logger.warn "ConfigLoader.new.process skipped: #{e.message}"
+end
 
 ## Seeds productions
 if Rails.env.production?
   # Setup Onboarding flow
-  Redis::Alfred.set(Redis::Alfred::CHATWOOT_INSTALLATION_ONBOARDING, true)
+  begin
+    Redis::Alfred.set(Redis::Alfred::CHATWOOT_INSTALLATION_ONBOARDING, true)
+  rescue StandardError => e
+    Rails.logger.warn "Redis::Alfred skipped: #{e.message}"
+  end
 
   admin_email = ENV.fetch('ADMIN_EMAIL', nil)
   admin_pass = ENV.fetch('ADMIN_PASSWORD', nil)
 
   if admin_email.present? && admin_pass.present?
+    ActiveJob::Base.queue_adapter = :test
     user = User.from_email(admin_email) || SuperAdmin.new(email: admin_email)
+    user.define_singleton_method(:fetch_avatar_from_gravatar) { nil }
     user.name = ENV.fetch('ADMIN_NAME', 'Admin')
     user.password = admin_pass
     user.type = 'SuperAdmin'
